@@ -1,0 +1,15 @@
+.lines {
+	.chart {
+    	d3-line-chart {
+      		height: 300px;
+      		width: 600px;
+      		display: block;
+
+      		path {
+        		stroke-width: 1;
+        		fill: none;
+        		shape-rendering: auto;
+      		}
+    	}
+	}
+}

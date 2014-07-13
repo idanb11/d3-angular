@@ -1,0 +1,32 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="app/css/app.css" />
+    <script src="app/bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body>
+    <div class="row">
+      <div class="large-12 columns">
+        <h1>Dashboard</h1>
+        <dl class="sub-nav">
+          <dd ui-sref-active="active"><a ui-sref="dashboard">Dashboard</a></dd>
+          <dd ui-sref-active="active"><a ui-sref="bars">Bars</a></dd>
+          <dd ui-sref-active="active"><a ui-sref="lines">Lines</a></dd>
+          <dd ui-sref-active="active"><a ui-sref="pies">Pies</a></dd>
+        </dl>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <div ui-view></div>
+      </div>
+    </div>
+
+    <script data-main="app/js/main" src="app/bower_components/requirejs/require.js"></script>
+
+    <script type="text/javascript">document.write('<script src="' + (location.protocol || 'http:') + '//' + (location.hostname || 'localhost') + ':35729/livereload.js?snipver=1" type="text/javascript"><\/script>')</script>
+  </body>
+</html>

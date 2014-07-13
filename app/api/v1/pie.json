@@ -1,0 +1,6 @@
+[
+  {"bucket":"True Negatives","count":8660},
+  {"bucket":"False Positives","count":3483},
+  {"bucket":"False Negatives","count":2300},
+  {"bucket":"True Positives","count":9882}
+]

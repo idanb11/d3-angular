@@ -1,0 +1,29 @@
+{
+  "name": "Assessment",
+  "version": "1.0.0",
+  "authors": [
+    "Juergen Walter <juwalter@gmail.com>"
+  ],
+  "description": "ssessment for Angular, Zurb Foundation and D3js",
+  "license": "none",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-mocks": "~1.2.1",
+    "angular-resource": "~1.2.1",
+    "angular-scenario": "~1.2.1",
+    "angular-ui-router": "~0.2.10",
+    "d3": "~3.4.9",
+    "foundation": "zurb/bower-foundation#~5.3.0",
+    "lodash": "~2.4.1",
+    "requirejs-domready": "~2.0.1",
+    "requirejs": "~2.1.9"
+  }
+}
