@@ -1,0 +1,57 @@
+@mixin linear-gradient($fromColor, $toColor) {
+  background-color: $toColor; /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient(top, $fromColor, $toColor); /* FF3.6 */
+  background-image:     -ms-linear-gradient(top, $fromColor, $toColor); /* IE10 */
+  background-image:      -o-linear-gradient(top, $fromColor, $toColor); /* Opera 11.10+ */
+  background-image:         linear-gradient(top, $fromColor, $toColor);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+}
+
+
+@mixin horizontal-gradient($from, $to, $stop: 100%) {
+  background-color: $from;/* fallback/image non-cover color */
+  background-image: -moz-linear-gradient(left, $from 0%, $to $stop); /* Firefox 3.6+ */
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, $from), color-stop($stop, $to)); /* Safari 4+, Chrome 1+ */
+  background-image: -webkit-linear-gradient(left, $from 0%, $to $stop); /* Safari 5.1+, Chrome 10+ */
+  background-image: -o-linear-gradient(left, $from 0%, $to $stop); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, $from 0%, $to $stop); /* IE10+ */
+  background: linear-gradient(to right, $from 0%, $to $stop); /* Standard */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 ); /* IE6-9 */
+}
+
+.form-gradiant {
+  @include horizontal-gradient(#F6FDFA, #BCEFDB); // Stick in your favourite HEX colours
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+#form-demo {
+  h2 {
+    color:  #00A14B;
+  }
+  p.description {
+    height: 75px;
+  }
+  label.select-title {
+    color:  #00A14B;
+  }
+  .form-border {
+    border-right: 2px solid #00A14B;
+  }
+}
+
+.custom-form-button {
+  @include button(
+    $bg: #00A14B,
+    $radius: 5px
+  );
+}
+
+.custom2-form-button {
+  @include button(
+    $bg: #6BDDB7,
+    $radius: 5px
+  );
+}
