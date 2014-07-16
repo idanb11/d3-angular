@@ -24,7 +24,7 @@
 .form-gradiant {
   @include horizontal-gradient(#F6FDFA, #BCEFDB); // Stick in your favourite HEX colours
   padding-top: 20px;
-  margin-top: 20px;
+  margin-top: 20px !important;
 }
 
 #form-demo {

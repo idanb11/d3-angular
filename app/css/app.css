@@ -37,7 +37,7 @@ html, body {
   font-size: 100%; }
 
 body {
-  background: grey;
+  background: #fff;
   color: #222;
   padding: 0;
   margin: 0;
@@ -4918,7 +4918,7 @@ th.hide-for-touch {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 );
   /* IE6-9 */
   padding-top: 20px;
-  margin-top: 20px; }
+  margin-top: 20px !important; }
 
 #form-demo h2 {
   color: #00A14B; }
