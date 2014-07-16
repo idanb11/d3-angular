@@ -1,42 +1,92 @@
 <hr/>
 <div class="dashboard">
-	<h3>Your tasks for the D3js and Angular assessment:</h3>
-	<ul>
-		<li>Follow the link "bars", "lines", "pies" and see the details there</li>
-	</ul>
-	<h3>Your tasks for the Zurb Foundation assessment:</h3>
-	<ul>
-		<li>
-			General hint: please use "git" for version control and make a git commit for each task, so it is 
-			easier for me to see how you implemented each one
-		</li>
-		<li>
-			<ul>
-				<li>Change the background of the page to a color of your liking</li>
-				<li>Change the global font to "font-family: 'Droid Sans', sans-serif;" from Google Fonts</li>
-				<li>Note: please use the "Foundation way (scss in the right place)"</li>
-			</ul>
-		<li>
-			<p>Make the top level navigation look like this</p>
-			<img src="app/img/navigation.png">
-			<p>
-				Make sure the currently selected item is highlighted (class active)
-				hint: 
-					<a href="https://github.com/angular-ui/ui-router/wiki/Quick-Reference#ui-sref-active">
-					  ui-sref-active documentation at Angular UI Router
-					</a>
-			</p>
-		</li>
-		<li>
-			<p>Make a form looking like this</p>
-			<img src="app/img/form.png">
-			<p>Texts for copy/pasting</p>
-			<ul>
-				<li>Prediction Schedule: Set your prediction schedule here. Please note that calculating predictions may take some time. You can start predictions manually too.</li>
-				<li>Evaluation Schedule: Set your evaluation schedule here. Automatic learning is based on evaluation results.</li>
-				<li>Automatic Learning: Choose your key performance indicator (KPI) from the list of available indicators and set the threshold that triggers automatic learning.</li>
-				<li>Color code does not matter (you can use this: <span style="color:#00A14B">#00A14B</span>) - make sure you put a gradient there (support latest Chrome and Firefox, no Internet Explorer necessar)</li>
-			</ul>
-		</li>
-	</ul>
+  <div>
+    <form id="form-demo" ng-submit="submitDemo()">
+      <h2>Settings</h2>
+      <div class="row">
+        <div class="large-4 columns form-border">
+          <h5>Prediction Schedule</h5>
+          <p class="description">
+            Set your prediction schedule here.
+            Please note that calculating predictions may take some time.
+            You can start predictions manually too.
+          </p>
+          <label class="select-title">Select schedule</label>
+          <div class="row">
+            <div class="large-5 columns">
+              <select>
+                <option value="hourly">hourly</option>
+                <option selected="selected" value="daily">daily</option>
+                <option value="weekly">weekly</option>
+                <option value="monthly">monthly</option>
+              </select>
+            </div>
+            <label for="time-label" class="left inline">at</label>
+            <div class="large-5 columns">
+              <input id="time-label" type="time" value="02:00"/>
+            </div>
+            <div class="large-offset-2 columns"></div>
+          </div>
+        </div>
+        <div class="large-4 columns form-border">
+          <h5>Evaluation Schedule</h5>
+          <p class="description">
+            Set your evaluation schedule here. Automatic learning is based on evaluation results.
+            <br>
+            <br>
+          </p>
+          <label class="select-title">Select schedule</label>
+          <div class="row">
+            <div class="large-5 columns">
+              <select>
+                <option value="hourly">hourly</option>
+                <option selected="selected" value="daily">daily</option>
+                <option value="weekly">weekly</option>
+                <option value="monthly">monthly</option>
+              </select>
+              </label>
+            </div>
+            <label for="time2-label" class="left inline">at</label>
+            <div class="large-5 columns">
+              <input id="time2-label" type="time" value="02:00"/>
+            </div>
+            <div class="large-offset-2 columns"></div>
+          </div>
+        </div>
+        <div class="large-4 columns">
+          <h5>Automatic Learning</h5>
+          <p class="description">
+            Choose your key performance indicator (KPI) from the list of available
+            indicators and set the threshold that triggers automatic learning.
+          </p>
+          <label class="select-title">Choose KPI and set threshold</label>
+          <div class="row">
+            <div class="large-5 columns">
+              <select>
+                <option selected="selected"  value="Precision">Precision</option>
+                <option value="Accuracy">Accuracy</option>
+                <option value="Exactness">Exactness</option>
+                <option value="Strictness">Strictness</option>
+              </select>
+              </label>
+            </div>
+            <label for="KPI-label" class="left inline">less than</label>
+            <div class="large-3 columns">
+              <input id="KPI-label" type="number" step="0.1" value="0.8" />
+            </div>
+            <div class="large-offset-4 columns"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row form-bottom form-gradiant">
+        <div class="large-8 columns left">
+          <input class="custom-form-button radius" type="submit" value="Delete">
+        </div>
+        <div class="large-4 columns text-center">
+          <input class="custom2-form-button radius" type="submit" value="Cancel">
+          <input class="custom-form-button radius" type="submit" value="Update">
+        </div>
+      </div>
+    </form>
+  </div>
 </div>

@@ -4890,8 +4890,97 @@ th.hide-for-touch {
     stroke-width: 1;
     fill: none;
     shape-rendering: auto; }
+.lines #sliderOutput {
+  display: table-cell;
+  vertical-align: middle;
+  height: 75px; }
 
 .bars .chart d3-bar-chart {
   height: 300px;
   width: 300px;
   display: block; }
+
+.form-gradiant {
+  background-color: #F6FDFA;
+  /* fallback/image non-cover color */
+  background-image: -moz-linear-gradient(left, #F6FDFA 0%, #BCEFDB 100%);
+  /* Firefox 3.6+ */
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, #F6FDFA), color-stop(100%, #BCEFDB));
+  /* Safari 4+, Chrome 1+ */
+  background-image: -webkit-linear-gradient(left, #F6FDFA 0%, #BCEFDB 100%);
+  /* Safari 5.1+, Chrome 10+ */
+  background-image: -o-linear-gradient(left, #F6FDFA 0%, #BCEFDB 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, #F6FDFA 0%, #BCEFDB 100%);
+  /* IE10+ */
+  background: linear-gradient(to right, #F6FDFA 0%, #BCEFDB 100%);
+  /* Standard */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 );
+  /* IE6-9 */
+  padding-top: 20px;
+  margin-top: 20px; }
+
+#form-demo h2 {
+  color: #00A14B; }
+#form-demo p.description {
+  height: 75px; }
+#form-demo label.select-title {
+  color: #00A14B; }
+#form-demo .form-border {
+  border-right: 2px solid #00A14B; }
+
+.custom-form-button {
+  border-style: solid;
+  border-width: 0px;
+  cursor: pointer;
+  font-family: 'Droid Sans', sans-serif;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0 0 1.66667rem;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  display: inline-block;
+  padding-top: 1.33333rem;
+  padding-right: 2.66667rem;
+  padding-bottom: 1.41667rem;
+  padding-left: 2.66667rem;
+  font-size: 1.33333rem;
+  background-color: #00A14B;
+  border-color: #00813a;
+  color: #fff;
+  border-radius: 5px; }
+  .custom-form-button:hover, .custom-form-button:focus {
+    background-color: #00813a; }
+  .custom-form-button:hover, .custom-form-button:focus {
+    color: #fff; }
+
+.custom2-form-button {
+  border-style: solid;
+  border-width: 0px;
+  cursor: pointer;
+  font-family: 'Droid Sans', sans-serif;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0 0 1.66667rem;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  display: inline-block;
+  padding-top: 1.33333rem;
+  padding-right: 2.66667rem;
+  padding-bottom: 1.41667rem;
+  padding-left: 2.66667rem;
+  font-size: 1.33333rem;
+  background-color: #6BDDB7;
+  border-color: #36d19d;
+  color: #fff;
+  border-radius: 5px; }
+  .custom2-form-button:hover, .custom2-form-button:focus {
+    background-color: #36d19d; }
+  .custom2-form-button:hover, .custom2-form-button:focus {
+    color: #fff; }

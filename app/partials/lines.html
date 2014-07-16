@@ -1,3 +1,5 @@
+
+
 <h1 class="title">Some lines</h1>
 <div class="row lines">
   <div class="large-6 columns">
@@ -12,16 +14,23 @@
   			  <label>Enter number of lines to draw</label>
   			  <input type="text" ng-model="numberOfLines" placeholder="Enter number of lines to draw">
   			  <input class="button" type="submit" value="Update line count">
-			</form>
-		</div>
+			  </form>
+		  </div>
 	  </div>
+    <label>Enter number of lines to draw</label>
+    <div class="row">
+      <div class="large-10 columns">
+        <div id="slider" class="range-slider radius" data-slider="1"
+             data-options="start: 1; end: 15; step: 1; display_selector: #sliderOutput;">
+          <span class="range-slider-handle"></span>
+          <span class="range-slider-active-segment"></span>
+          <input type="hidden">
+        </div>
+      </div>
+      <div class="large-2 columns">
+        <div id="sliderOutput"></div>
+      </div>
+    </div>
+
   </div>
 </div>
-
-<hr />
-<div>
-	<p>Your Task: make the chart above looks like this</p>
-	<img src="app/img/linesFinal.png">
-</div>
-
-      

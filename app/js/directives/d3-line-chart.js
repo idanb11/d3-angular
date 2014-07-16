@@ -12,9 +12,9 @@ define([
 
     function yScaleMin(dataMin, baseline) {
       if (!baseline || dataMin < baseline) {
-        return 0
+        return 0;
       } else {
-        return (Math.round(baseline * 10) - 1) / 10.0
+        return (Math.round(baseline * 10) - 1) / 10.0;
       }
     }
 
@@ -31,18 +31,19 @@ define([
         };
 
         var graph = new Chart(ele[0], dimensions);
+        var color = d3.scale.category20(); //builtin range of colors
 
         scope.$watch('lines', function (newLines) {
           if (newLines != null) {
-            scope.render(newLines)
-          };
+            scope.render(newLines);
+          }
         }, true);
 
         scope.render = function (newLines) {
           graph.selectAll('*').remove();
 
           if (!newLines) return;
-          if (renderTimeout) $timeout.cancel(renderTimeout);
+          if (renderTimeout) { $timeout.cancel(renderTimeout); }
 
           renderTimeout = $timeout(function () {
             var data = newLines[0];
@@ -81,13 +82,16 @@ define([
                 return graph.yScale(d[1]);
               });
 
-            // add line
-            graph.append('path')
-              .attr('d', line(data))
-              .attr('stroke', 'red');
+            // create a line graph for line the dataset
+            scope.lines.forEach(function(lineData, index, array) {
+              graph.append('path')
+                .attr('d', line(lineData))
+                .attr('stroke', color(index));
+            });
+
           }, 200); // renderTimeout
         };
       }
     };
-  }]
+  }];
 });

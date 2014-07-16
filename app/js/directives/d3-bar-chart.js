@@ -24,6 +24,7 @@ define([
         var y = d3.scale.linear().range([svg.height(), 0]);
         var yAxis = d3.svg.axis().scale(y).orient('left');
         var xAxis = d3.svg.axis().scale(x).orient('bottom'); // declare the X axis
+        var color = d3.scale.category20(); //builtin range of colors
 
         scope.$watch('bars', function (newBars) {
           if (newBars != null) scope.render(newBars);
@@ -61,8 +62,8 @@ define([
               .attr('class', 'bar')
               .attr('y', svg.height())
               .attr('height', 0)
-              .attr("fill", function() {  // make each bar have a different random color
-                return '#' + Math.random().toString(16).substring(2, 8);
+              .attr("fill", function(d, i) {  // make each bar have a different random color
+                return color(i);
               });
 
             bars.transition()

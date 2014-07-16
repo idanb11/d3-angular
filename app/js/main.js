@@ -12,17 +12,18 @@ require.config({
 		angularResource: '../bower_components/angular-resource/angular-resource',
 		angularUIRouter: '../bower_components/angular-ui-router/release/angular-ui-router',
 		d3:              '../bower_components/d3/d3',
-	    domReady :       '../bower_components/requirejs-domready/domReady',
+    domReady :       '../bower_components/requirejs-domready/domReady',
 		jquery:          '../bower_components/jquery/dist/jquery',
 		lodash:          '../bower_components/lodash/dist/lodash.min',
-		text:            '../bower_components/requirejs-text/text'
-	},
+		text:            '../bower_components/requirejs-text/text',
+    foundation:      '../bower_components/foundation/js/foundation' // add foundation path to require.js
+  },
 	shim: {
 		'angular' : { 
 			deps : [
-				'domReady',
-        		'jquery'
-      		],
+        'domReady',
+        'jquery'
+      ],
 			exports : 'angular' 
 		},
 		'angularResource': [ 'angular' ],
@@ -31,26 +32,29 @@ require.config({
 			exports :'angular.mock'
 		},
 		'angularUIRouter' : {
-      		deps : [
-        		'angular'
-      		]
+      deps : [
+        'angular'
+      ]
 		},
-		 d3 : {
-      		exports : 'd3'
+    d3 : {
+      exports : 'd3'
 		},
-    	jquery : {
-      		exports : '$'
+    jquery : {
+      exports : '$'
 		},
+    'foundation': {  // add foundation path to require.js
+      deps: ['jquery']
+    },
 		lodash : {
-		  exports : '_'
-	    }
+      exports : '_'
+    }
 	},
 	priority: [
 		'angular'
 	]
 });
 
-require(['angular', 'app'], function ( angular, app ) {
+require(['angular', 'app', 'foundation'], function ( angular, app ) {
   'use strict';
 
   require(['domReady!'], function ( document ) {

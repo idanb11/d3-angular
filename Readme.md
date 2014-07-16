@@ -1,7 +1,9 @@
 # About
 
 This is a show case of D3.js and angularJS.
-Shows Pie chart and Bars chart.
+Shows Pie chart Bars chart and Lines chart.
+
+Uses Gulp for building and serving
 
 ## Installation
 
