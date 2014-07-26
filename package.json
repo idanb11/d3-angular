@@ -1,7 +1,7 @@
 {
-  "name": "assessment",
+  "name": "D3.js - AngularJS",
   "version": "1.0.0",
-  "description": "Project to assess Angular, D3js and Foundation skills",
+  "description": "Show case for Angular and D3js",
   "directories": {
     "test": "test"
   },

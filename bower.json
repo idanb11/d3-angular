@@ -1,10 +1,10 @@
 {
-  "name": "Assessment",
+  "name": "D3.js - AngularJS",
   "version": "1.0.0",
   "authors": [
-    "Juergen Walter <juwalter@gmail.com>"
+    "Idan Bercovici <idanb11@gmail.com>"
   ],
-  "description": "ssessment for Angular, Zurb Foundation and D3js",
+  "description": "Angular and D3js",
   "license": "none",
   "private": true,
   "ignore": [
@@ -24,6 +24,7 @@
     "foundation": "zurb/bower-foundation#~5.3.0",
     "lodash": "~2.4.1",
     "requirejs-domready": "~2.0.1",
-    "requirejs": "~2.1.9"
+    "requirejs": "~2.1.9",
+    "angular-animate": "~1.2.21"
   }
 }

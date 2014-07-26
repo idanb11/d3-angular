@@ -16,7 +16,8 @@ require.config({
 		jquery:          '../bower_components/jquery/dist/jquery',
 		lodash:          '../bower_components/lodash/dist/lodash.min',
 		text:            '../bower_components/requirejs-text/text',
-    foundation:      '../bower_components/foundation/js/foundation' // add foundation path to require.js
+    foundation:      '../bower_components/foundation/js/foundation', // add foundation path to require.js
+    angularAnimate:  '../bower_components/angular-animate/angular-animate'
   },
 	shim: {
 		'angular' : { 
@@ -45,6 +46,7 @@ require.config({
     'foundation': {  // add foundation path to require.js
       deps: ['jquery']
     },
+    'angularAnimate': ['angular'],
 		lodash : {
       exports : '_'
     }
