@@ -7,10 +7,11 @@ Uses Gulp for building and serving
 
 ## Installation
 
-    npm install
-    bower install
+    clone repo
+    run npm install
+    run bower install
 
-## Running
+## Running server
 
     # Serve static files and automatically compile assets (scss)
     npm install -g gulp
